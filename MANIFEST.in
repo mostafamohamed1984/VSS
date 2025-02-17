@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include lead_conversion_control *.css
+recursive-include lead_conversion_control *.csv
+recursive-include lead_conversion_control *.html
+recursive-include lead_conversion_control *.ico
+recursive-include lead_conversion_control *.js
+recursive-include lead_conversion_control *.json
+recursive-include lead_conversion_control *.md
+recursive-include lead_conversion_control *.png
+recursive-include lead_conversion_control *.py
+recursive-include lead_conversion_control *.svg
+recursive-include lead_conversion_control *.txt
+recursive-exclude lead_conversion_control *.pyc 
