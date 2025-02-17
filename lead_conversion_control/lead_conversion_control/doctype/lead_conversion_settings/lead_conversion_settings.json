@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2024-02-17 20:40:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "allow_lead_conversion",
+  "conversion_settings_section",
+  "allow_customer_conversion",
+  "allow_opportunity_creation",
+  "allow_quotation_creation"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "allow_lead_conversion",
+   "fieldtype": "Check",
+   "label": "Allow Lead Conversion"
+  },
+  {
+   "depends_on": "allow_lead_conversion",
+   "fieldname": "conversion_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Conversion Settings"
+  },
+  {
+   "default": "0",
+   "depends_on": "allow_lead_conversion",
+   "fieldname": "allow_customer_conversion",
+   "fieldtype": "Check",
+   "label": "Allow Customer Conversion"
+  },
+  {
+   "default": "0",
+   "depends_on": "allow_lead_conversion",
+   "fieldname": "allow_opportunity_creation",
+   "fieldtype": "Check",
+   "label": "Allow Opportunity Creation"
+  },
+  {
+   "default": "0",
+   "depends_on": "allow_lead_conversion",
+   "fieldname": "allow_quotation_creation",
+   "fieldtype": "Check",
+   "label": "Allow Quotation Creation"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-02-17 20:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "Lead Conversion Control",
+ "name": "Lead Conversion Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+} 

@@ -1,9 +1,9 @@
 app_name = "lead_conversion_control"
-app_title = "Vision Security Systems Custom App"
+app_title = "Lead Conversion Control"
 app_publisher = "Mustafa Nazier"
-app_description = "null"
+app_description = "Control lead conversion options in ERPNext"
 app_email = "mustafanazieer@gmail.com"
-app_license = "mit"
+app_license = "MIT"
 
 # Apps
 # ------------------
@@ -129,9 +129,17 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Lead": "lead_conversion_control.custom_overrides.custom_lead.CustomLead"
+}
+
+# Fixtures - this will ensure our DocType is included when the app is installed
+fixtures = [
+    {
+        "doctype": "Lead Conversion Settings",
+        "filters": [["name", "in", ["Lead Conversion Settings"]]]
+    }
+]
 
 # Document Events
 # ---------------
