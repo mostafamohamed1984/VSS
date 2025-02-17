@@ -250,3 +250,9 @@ fixtures = [
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# DocType JS
+# ---------------
+doctype_js = {
+    "Lead": "public/js/lead.js"
+}
+

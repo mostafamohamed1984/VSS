@@ -30,11 +30,17 @@ class CustomLead(Lead):
             frappe.throw(_("Creating Quotation from lead is not allowed."))
         return super().make_quotation()
 
+    def make_prospect(self):
+        if not self.can_convert_to("Prospect"):
+            frappe.throw(_("Creating Prospect from lead is not allowed."))
+        return super().make_prospect()
+
     def can_convert_to(self, doctype):
         settings = frappe.get_doc("Lead Conversion Settings")
         conversion_map = {
             "Customer": "allow_customer_conversion",
             "Opportunity": "allow_opportunity_creation",
-            "Quotation": "allow_quotation_creation"
+            "Quotation": "allow_quotation_creation",
+            "Prospect": "allow_prospect_creation"
         }
         return getattr(settings, conversion_map.get(doctype, ""), 0) 

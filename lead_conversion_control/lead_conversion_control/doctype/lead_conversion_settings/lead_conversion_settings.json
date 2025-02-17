@@ -9,7 +9,8 @@
   "conversion_settings_section",
   "allow_customer_conversion",
   "allow_opportunity_creation",
-  "allow_quotation_creation"
+  "allow_quotation_creation",
+  "allow_prospect_creation"
  ],
  "fields": [
   {
@@ -44,6 +45,13 @@
    "fieldname": "allow_quotation_creation",
    "fieldtype": "Check",
    "label": "Allow Quotation Creation"
+  },
+  {
+   "default": "0",
+   "depends_on": "allow_lead_conversion",
+   "fieldname": "allow_prospect_creation",
+   "fieldtype": "Check",
+   "label": "Allow Prospect Creation"
   }
  ],
  "index_web_pages_for_search": 1,
